@@ -89,7 +89,7 @@ export default function ExploreScreen() {
         horizontal
         showsHorizontalScrollIndicator={false}
         style={styles.chipRow}
-        contentContainerStyle={{ gap: 8 }}
+        contentContainerStyle={{ gap: 8, alignItems: 'center' }}
       >
         {CATEGORIES.map((category) => {
           const active = category === activeCategory;
@@ -161,10 +161,10 @@ export default function ExploreScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
   header: { fontSize: 20, fontWeight: '800', color: colors.textPrimary, paddingHorizontal: 20, paddingTop: 18, paddingBottom: 12 },
-  chipRow: { paddingHorizontal: 20, marginBottom: 14, flexGrow: 0 },
-  chip: { paddingVertical: 8, paddingHorizontal: 14, borderRadius: 16, backgroundColor: '#E4E7EE' },
-  chipActive: { backgroundColor: colors.primary },
-  chipText: { fontSize: 12, fontWeight: '700', color: colors.primary },
+  chipRow: { paddingHorizontal: 20, marginBottom: 14, flexGrow: 0, height: 48 },
+  chip: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 999, backgroundColor: '#FFFFFF', borderWidth: 1.5, borderColor: colors.primary },
+  chipActive: { backgroundColor: colors.primary, borderColor: colors.primary },
+  chipText: { fontSize: 13, fontWeight: '700', color: colors.primary },
   chipTextActive: { color: '#FFFFFF' },
   offlineBanner: { marginHorizontal: 20, marginBottom: 10, backgroundColor: colors.tagBackground, borderRadius: 8, paddingVertical: 8, paddingHorizontal: 12 },
   offlineBannerText: { fontSize: 12, color: colors.tagText, fontWeight: '600' },
